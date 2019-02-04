@@ -1,0 +1,22 @@
+h3 Busines list
+
+= link_to 'new', new_business_path
+
+table
+    tr
+      th Id
+      th Type
+      - @businesses.each do |business|
+        tr
+          td
+            = business.id
+          td
+            = business.business_type
+          td
+            = link_to 'Show', business_path(business)
+          td
+            = link_to 'Edit', edit_business_path(business)
+          td
+            = link_to 'Add Data', new_business_place_path(business)
+          td
+            = link_to 'Delete', business_path(business), method: :delete, data: {confirm: 'Are yuh sure ?'}

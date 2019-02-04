@@ -1,0 +1,22 @@
+= form_with(model:[@business, @place], local: true) do |form|
+  = form.label :Name
+  br
+  = form.text_field  :name
+  br
+  = form.label :Address
+  br
+  = form.text_field :address
+  br
+  = form.label :phone
+  br
+  = form.text_field :phone
+  br
+  = form.label :website
+  br
+  = form.text_field  :website
+  br
+  = form.label :'hours of operation'
+  br
+  = form.text_field :hours_of_oparation
+  br
+  = form.submit
